@@ -64,7 +64,7 @@ def func_type(data):
         return f'Неправильный тип данных'
 
 
-print(func_type([1, 2, 3, 'a', 'bc8?']))
+func_type([1, 2, 3, 'a', 'bc8?'])
 print(func_type(788))
 print(func_type('788'))
 print(func_type((1, 2, 3, 'a', 'bc8?', 7, 8, 9)))
