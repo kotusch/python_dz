@@ -1,7 +1,7 @@
 # ДЗ на вторник:
 # 1. Создайте класс Person, который имеет атрибуты name и age, а также метод greet() (выводит приветствие на экран с именем персоны).
 
-class Person():
+class Person:
     name = 'Zhenya'
     age = 29
 
@@ -16,7 +16,8 @@ p2.greet()
 
 # 2. Создайте класс Car, который имеет атрибуты make, model и year, а также метод get_info() (возвращает строку, содержащую информацию о машине).
 
-class Car():
+
+class Car:
     make = 'Opel'
     model = 'Vectra'
     year = 2010
