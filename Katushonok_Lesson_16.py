@@ -26,10 +26,10 @@ class Calkulator:
     def minus(self, num_1, num_2):
         return num_1 - num_2
 
-    def umpn(self, num_1, num_2):
+    def __umpn(self, num_1, num_2):
         return num_1 * num_2
 
-    def delen(self, num_1, num_2):
+    def _delen(self, num_1, num_2):
         return num_1 / num_2
 
 cal1 = Calkulator()
@@ -58,3 +58,6 @@ while True:
 
 print(cal1.minus(10, 5))
 print(cal1.add(10, 5))
+
+print(cal1.__umpn(2,3))
+print(cal1._delen(6, 3))

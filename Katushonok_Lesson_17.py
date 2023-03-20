@@ -39,10 +39,10 @@ class Human:
     def info(self):
         print(f'Имя: {self.name}, возраст: {self.age}, наличие дома: {self.__house}, денег: {self.__money}')
 
-    def buy_house(self):
-        if h1.price < self.__money:
+    def buy_house(self, house):
+        if house.price < self.__money:
             self.__house = True
-            self.__money -= h1.price
+            self.__money -= house.price
         else:
             print("Не хватает денег!")
 # Реализуйте справочный статический метод default_info(), который будет выводить статические поля default_name и default_age.
@@ -62,5 +62,5 @@ p1 = Human("Evgeniy", 29)
 p1.info()
 h1 = House(100, 2, 100)
 h1.house_info()
-p1.buy_house()
+p1.buy_house(h1)
 p1.info()
