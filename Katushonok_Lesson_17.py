@@ -59,7 +59,8 @@ class Human:
 
 
 p1 = Human("Evgeniy", 29)
-h1 = House(100, 2, 10000)
+p1.info()
+h1 = House(100, 2, 100)
 h1.house_info()
 p1.buy_house()
 p1.info()
