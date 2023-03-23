@@ -24,14 +24,26 @@ class Animals(ABC):
         pass
 
 
+
 class Birds(Animals):
     def __init__(self, genus, name, age):
         self.__genus = genus
-        self.__name = name
+        self.name = name
         self.__age = age
 
     def __str__(self):
         return f'Род птицы {self.__genus}, кличка {self.__name}, возраст {self.__age}'
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        if name.istitle():
+            self.__name = name
+        else:
+            self.__name = name.title()
 
     def drink(self):
         print('Птицы пьют воду.')
@@ -61,12 +73,33 @@ class Mammals(Animals):
     def eat(self):
         print('Млекопитающие бывают хищниками и травоядными')
 
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        if name.istitle():
+            self.__name = name
+        else:
+            self.__name = name.title()
 
 class Fish(Animals):
     def __init__(self, genus, name, age):
         self.__genus = genus
-        self.__name = name
+        self.name = name
         self.__age = age
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        if name.istitle():
+            self.__name = name
+        else:
+            self.__name = name.title()
 
     def __str__(self):
         return f'Род рыбы {self.__genus}, кличка {self.__name}, возраст {self.__age}'
@@ -81,9 +114,8 @@ class Fish(Animals):
         print('Рыбы бывают хищниками и травоядными')
 
 
-bird_1 = Birds("Ара", 'Рио', 2)
+bird_1 = Birds("Ара", 'рио', 2)
 print(bird_1)
 bird_1.movement()
-
 mammal_1 = Mammals('Лев', 'Лёва', 5)
 print(mammal_1)
